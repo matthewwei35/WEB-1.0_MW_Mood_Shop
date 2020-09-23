@@ -24,3 +24,17 @@ body {
     padding: 0.5em;
     text-decoration: none;
 }
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(4, 120px);
+    grid-column-gap: 200px;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.item {
+    border: solid 1px;
+    width: 300px;
+    margin-top: 30px;
+}
