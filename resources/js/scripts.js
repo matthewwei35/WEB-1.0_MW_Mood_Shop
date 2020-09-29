@@ -21,7 +21,7 @@ for (let i = 0; i < data.length; ++i) {
     // Create a paragraph element for a description
     let desc = document.createElement('P')
     // Give the paragraph text from the data
-    desc.innerText =data[i].desc
+    desc.innerText = data[i].desc
     // Append the paragraph to the div
     newDiv.appendChild(desc)
     // Do the same thing for price
@@ -40,3 +40,20 @@ for (let i = 0; i < data.length; ++i) {
     itemsContainer.appendChild(newDiv)
 }
 
+const cart = [ ]
+
+function addItem(name, price) {
+    const item = { name:  name, price: price, qty: 1 } 
+    cart.push(item)
+}
+
+function showItems() {
+    console.log(`You have ${cart.length} items in your cart.`)
+}
+
+addItem('apple', 0.99)
+addItem('orange', 1.29)
+addItem('opinion', 0.02)
+addItem('frisbee', 5.00)
+
+showItems()
